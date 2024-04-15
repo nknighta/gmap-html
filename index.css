@@ -37,11 +37,10 @@ header {
 }
 .control input {
     text-align: center;
-    padding: 10px 0 10px 0;
-    margin: 10px 10px 0 10px;
+    margin: 10px 0 0 10px;
     background-color: #555;
     color: #fff;
-    width: 100px;
+    width: 70px;
     height: 50px;
     border: none;
     border-radius: 10px;

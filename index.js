@@ -1,3 +1,4 @@
+
 window.addEventListener('DOMContentLoaded', () => {
   getPosition();
 });
@@ -7,12 +8,13 @@ const base = document.getElementById('main');
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
+const pitchinput = document.getElementById('pitchinput');
+
 let map = new maplibregl.Map({
   container: 'map',
   style: 'https://tile.openstreetmap.jp/styles/osm-bright-ja/style.json', // 地図のスタイル
   center: [139.8108103, 35.7100069], // 中心座標
-  zoom: 13,
-  pitch: 30 // 傾き
+  zoom: 16,
 })
 
 const loadstatus = document.getElementById('loadstatus');
@@ -40,9 +42,13 @@ function getPosition() {
 
       map.jumpTo({
         center: [nowLongitude, nowLatitude],
-        zoom: 16,
-        pitch: 30
+        zoom: 18.2,
       });
     },
   )
 }
+
+
+pitchinput.addEventListener('input', (e) => {
+  map.setPitch(Number(e.target.value));
+});
