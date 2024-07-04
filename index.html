@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maps HTML - nknighta apps</title>
+    <title>Navigator | VARIUS</title>
     <link rel="stylesheet" href="./index.css">
     <script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
     <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
-
-<header>
-    <div class="title">
-        <p>Maps HTML</p>
-    </div>
-    <div class="control">
-        <button onclick="getPosition()">📍</button>
-    </div>
-</header>
 
 <body>
     <div id="map"></div>
 </body>
 <footer>
-    <p>(c)<a href="https://nknighta.github.io/">nknighta apps</a> - Map API by maplibre</p>
-    <p id="loadstatus"></p>
+    <div class="footer-1">
+        <div class="control">
+            <div id="loadstatus"></div>
+            <button onclick="currentPosition()">📍</button>
+        </div>
+        <a href="/gmap-html/info/view.html">info</a>
+    </div>
 </footer>
 <script src="./index.js"></script>
 
